@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doseluz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <style>
+    .modal-content {
+      border-radius: 0 !important;
+    }
+
+    img.produto-img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+      img.produto-img {
+        max-width: 500px;
+      }
+    }
+
+    .footer {
+      background-color: #7cabcf;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .footer div {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #5592c5;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/doseluz logo.png" alt="Logo da Doseluz" width="140" height="50" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Localização.html">Nossa Localização</a></li>
+        <li class="nav-item"><a class="nav-link" href="Produtos.html">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" target="_blank" href="https://wa.me/5521993348747?text=Olá!%20Eu%20quero%20saber%20mais%20sobre%20(---)">Encomendas</a></li>
+      </ul>
+      <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Pesquisar</button>
+      </form>
+      <button type="button" class="btn" style="background-color: #FFB74D;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="..."/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal Carrinho -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="height: 100vh;">
+    <div class="modal-content" style="height: 100%; overflow-y: auto;">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Carrinho</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="checkout/index.html" class="btn btn-primary">Finalizar compras</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botao flutuante whatsap-->
+<a href="https://wa.me/5521993348747?text=Ol%C3%A1!%20Eu%20quero%20saber%20mais%20sobre%20(---)" target="_blank">
+    <img src="img/whatsapp.png" 
+         alt="WhatsApp"
+         style="position: fixed;
+                bottom: 2vh;
+                right: 2vw;
+                width: 60px;
+                height: auto;
+                z-index: 1000;">
+  </a>
+
+<!--Estrutura-->
+<br><br><br><br>
+<div class="container my-4">
+  <div class="row gy-4 align-items-center">
+    <div class="col-12 col-md-6">
+      <img src="img/bolo matilda.jpg" alt="Imagem do produto bolo matilda" class="img-fluid rounded shadow-sm">
+    </div>
+    <div class="col-12 col-md-6 text-center text-md-start">
+      <h2 class="fw-bold">Bolo Matilda</h2>
+      <h3 class="text-danger mt-2">R$19,90</h3>
+
+      <a href="checkout/index.html" class="btn btn-warning w-100 my-3" style="max-width: 250px;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+        </svg>
+        COMPRAR
+      </a>
+
+      <p class="text-muted" style="font-size: 0.85rem;">* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
+
+      <!-- Frete e CEP -->
+      <div class="d-flex align-items-center mt-4 mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-truck me-2" viewBox="0 0 16 16">
+          <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+        </svg>
+        <span class="fw-semibold">Frete e prazo de entrega</span>
+      </div>
+
+      <form class="row g-2 align-items-center mt-1">
+        <div class="col-12 col-sm-6">
+          <input type="text" class="form-control" placeholder="Digite seu CEP">
+        </div>
+        <div class="col-12 col-sm-6">
+          <button type="submit" class="btn btn-primary w-100">Calcular</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Botões de Modal -->
+<div class="container my-5">
+    <div class="row justify-content-center text-center">
+      <div class="col-6 col-md-3 mb-2">
+        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#descricaoModal">
+          📋 Descrição
+        </button>
+      </div>
+      <div class="col-6 col-md-3 mb-2">
+        <button class="btn btn-outline-success w-100" data-bs-toggle="modal" data-bs-target="#pagamentoModal">
+          💳 Formas de Pagamento
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Descrição -->
+  <div class="modal fade" id="descricaoModal" tabindex="-1" aria-labelledby="descricaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="descricaoModalLabel">✨ Descrição do Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-start">
+            <section>
+                <h2>Bolo Matilda – Chocolate em Dobro, Prazer em Triplo</h2>
+                <p>
+                  Para os chocólatras de plantão: o <strong>Bolo Matilda</strong> é uma verdadeira obra-prima do exagero e da indulgência. Feito com uma massa super úmida de chocolate intenso, ele é recheado e coberto com uma generosa e cremosa ganache de chocolate meio amargo — tudo isso em camadas fartas, como no clássico filme.
+                </p>
+                <p>
+                  Cada pedaço é denso, rico e profundamente saboroso, com o equilíbrio perfeito entre doçura e intensidade. Produzido artesanalmente com ingredientes premium, sem conservantes, é o tipo de sobremesa que transforma qualquer ocasião em um momento inesquecível.
+                </p>
+                <h3>Destaques:</h3>
+                <ul>
+                  <li>Chocolate do início ao fim: massa, recheio e cobertura</li>
+                  <li>Ganache cremosa feita com chocolate meio amargo</li>
+                  <li>Massa extremamente úmida e rica</li>
+                  <li>Ideal para aniversários, presentes ou pura indulgência</li>
+                  <li>Produção artesanal com ingredientes selecionados</li>
+                </ul>
+                <p><strong>Uma explosão de chocolate digna de cinema. Se é para exagerar, que seja com estilo.</strong></p>
+              </section>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Pagamento -->
+  <div class="modal fade" id="pagamentoModal" tabindex="-1" aria-labelledby="pagamentoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pagamentoModalLabel">💰 Formas de Pagamento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-start">
+          <p>Escolha a opção que for mais conveniente para você:</p>
+          <ul>
+            <li>💳 Cartões de Crédito (Visa, MasterCard, Elo, Amex)</li>
+            <li>🏦 Pix – instantâneo e sem taxas</li>
+            <li>📄 Boleto Bancário – até 3 dias úteis para compensar</li>
+            <li>📱 Carteiras Digitais (Apple Pay, Google Pay, Mercado Pago)</li>
+            <li>🛒 Pagamento via PagSeguro ou PayPal</li>
+          </ul>
+          <p class="text-muted"><small>Pagamentos 100% seguros com criptografia de ponta a ponta.</small></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
+<!-- Footer -->
+<div class="footer mt-5">
+  <div><strong>Horário:</strong><br>Terça a sábado: 08h–18h<br>Domingo: 10h–17h</div>
+  <div><strong>Localização:</strong><br>Copacabana, número xxx<br>Bloco x, sala xx</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
